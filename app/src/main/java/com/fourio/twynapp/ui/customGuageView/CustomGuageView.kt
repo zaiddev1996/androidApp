@@ -18,7 +18,6 @@ class CustomGuageView(
 
     private val paint: Paint = Paint()
     private val paintProgress: Paint = Paint()
-    private val paintTriangle: Paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private var angle: Float = 0f
 
     private var rectangle: RectF? = null
@@ -45,10 +44,6 @@ class CustomGuageView(
         paintProgress.color = ContextCompat.getColor(context, R.color.light_blue)
         paintProgress.style = Paint.Style.STROKE
         paintProgress.strokeWidth = resources.getDimensionPixelSize(R.dimen._5sdp).toFloat()
-        paintTriangle.strokeWidth = (2f);
-        paintTriangle.color = (android.graphics.Color.RED);
-        paintTriangle.style = (Paint.Style.FILL_AND_STROKE);
-        paintTriangle.isAntiAlias = (true);
         margin =
             resources.getDimensionPixelSize(com.fourio.twynapp.R.dimen._3sdp)
                 .toFloat() // margin should be >= strokeWidth / 2 (otherwise the arc is cut)
@@ -56,36 +51,13 @@ class CustomGuageView(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        val icon = BitmapFactory.decodeResource(
-            context.resources,
-            com.fourio.twynapp.R.drawable.guage_needle
-        )
-        val matrix = Matrix()
 
-
-        matrix.preScale(0.3f, 0.3f)
-
-        matrix.setTranslate(
-            resources.getDimensionPixelSize(R.dimen._45sdp).toFloat(),
-            resources.getDimensionPixelSize(R.dimen._45sdp).toFloat()
-        )
-
-        matrix.postRotate(
-            90f,
-            (icon.width / 2).toFloat(),
-            (icon.height / 2).toFloat()
-        )
         if (rectangle == null) {
             rectangle =
                 RectF(0f + margin, 0f + margin, width.toFloat() - margin, height.toFloat() - margin)
         }
         canvas.drawArc(rectangle!!, 180f, 180f, false, paint)
         canvas.drawArc(rectangle!!, 180f, angle, false, paintProgress)
-//        canvas.drawBitmap(
-//            icon,
-//            matrix,
-//            paintProgress
-//        )
     }
 
     fun setAngle(angle_: Float) {
