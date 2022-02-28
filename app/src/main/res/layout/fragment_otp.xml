@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_frag_bg"
+    tools:context=".ui.onBoardingProcess.otpFragment.otpFragment">
+
+    <ImageView
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:padding="@dimen/_7sdp"
+        android:id="@+id/iv_close"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_lock"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:src="@drawable/ic_otp_lock_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_heading_security_verication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="@string/security_verification"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_22ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_lock" />
+
+    <TextView
+        android:id="@+id/tv_heading_phone_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="@string/phone_verification_code"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_security_verication" />
+
+    <View
+        android:id="@+id/view_stroke_phone_verify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/light_stroke"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_phone_verify" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:inputType="number"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_5sdp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/view_stroke_phone_verify"
+        app:layout_constraintEnd_toEndOf="@id/view_stroke_phone_verify"
+        app:layout_constraintStart_toStartOf="@id/view_stroke_phone_verify"
+        app:layout_constraintTop_toTopOf="@id/view_stroke_phone_verify" />
+
+    <TextView
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:gravity="center"
+        android:text="@string/send"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/view_stroke_phone_verify"
+        app:layout_constraintEnd_toEndOf="@id/view_stroke_phone_verify"
+        app:layout_constraintTop_toTopOf="@id/view_stroke_phone_verify" />
+
+    <TextView
+        android:id="@+id/tv_code_sent_to_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="Enter the 6 digit code sent to 672**1655"
+        android:textColor="#80FFFFFF"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="@id/view_stroke_phone_verify"
+        app:layout_constraintTop_toBottomOf="@id/view_stroke_phone_verify" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_sent_to_num"
+        android:background="#80FFFFFF"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:id="@+id/divider"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+    <TextView
+        android:id="@+id/tv_heading_email_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="@string/email_verification_code"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <View
+        android:id="@+id/view_stroke_email_verify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/light_stroke"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_email_verify" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_50sdp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:inputType="number"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_5sdp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/view_stroke_email_verify"
+        app:layout_constraintEnd_toEndOf="@id/view_stroke_email_verify"
+        app:layout_constraintStart_toStartOf="@id/view_stroke_email_verify"
+        app:layout_constraintTop_toTopOf="@id/view_stroke_email_verify" />
+
+    <TextView
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:gravity="center"
+        android:text="39s"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@id/view_stroke_email_verify"
+        app:layout_constraintEnd_toEndOf="@id/view_stroke_email_verify"
+        app:layout_constraintTop_toTopOf="@id/view_stroke_email_verify" />
+
+    <TextView
+        android:id="@+id/tv_code_sent_to_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="Enter the 6-digit code sent to mes***@gmail.com"
+        android:textColor="#80FFFFFF"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="@id/view_stroke_email_verify"
+        app:layout_constraintTop_toBottomOf="@id/view_stroke_email_verify" />
+
+    <include
+        layout="@layout/yellow_continue_btn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_code_sent_to_email"
+        android:id="@+id/included_btn"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

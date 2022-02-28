@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.fourio.twynapp.ui.dashboard.homeFragment.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="com.fourio.twynapp.ui.dashboard.servicesFragment.servicesFragment"
+        android:label="services_fragment"
+        tools:layout="@layout/fragment_services"/>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.fourio.twynapp.ui.dashboard.historyFragment.historyFragment"
+        android:label="history_fragment"
+        tools:layout="@layout/fragment_history"/>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.fourio.twynapp.ui.dashboard.settingsFragment.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/fragment_settings"/>
+
+</navigation>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view_finger_login"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/bg_blue_circle_gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:src="@drawable/ic_face_login"
+        app:layout_constraintBottom_toBottomOf="@id/view_finger_login"
+        app:layout_constraintEnd_toEndOf="@id/view_finger_login"
+        app:layout_constraintStart_toStartOf="@id/view_finger_login"
+        app:layout_constraintTop_toTopOf="@id/view_finger_login" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="@string/face_verification_request"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toEndOf="@id/view_finger_login"
+        app:layout_constraintTop_toTopOf="@id/view_finger_login" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="2h ago"
+        android:textAllCaps="true"
+        android:textColor="#80FFFFFF"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintBottom_toBottomOf="@id/view_finger_login"
+        app:layout_constraintStart_toEndOf="@id/view_finger_login" />
+
+    <View
+        android:layout_width="@dimen/_4sdp"
+        android:layout_height="0dp"
+        android:background="#2F6991"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view_finger_login"
+        app:layout_constraintStart_toStartOf="@id/view_finger_login"
+        app:layout_constraintTop_toBottomOf="@id/view_finger_login" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_request"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="#184F74"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="0dp"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_accept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/view_finger_login"
+        app:layout_constraintTop_toBottomOf="@id/view_finger_login"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_request_img"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="@dimen/_25sdp"
+        app:cardElevation="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="@id/cv_request"
+        app:layout_constraintTop_toTopOf="@id/cv_request" />
+
+
+    <TextView
+        android:id="@+id/tv_request"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:elevation="@dimen/_20sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:lineSpacingExtra="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="Bank of Brazil wants to verify your identity "
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toStartOf="@id/iv_arrow_right"
+        app:layout_constraintStart_toEndOf="@id/cv_request_img"
+        app:layout_constraintTop_toTopOf="@id/cv_request_img" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_right"
+        android:layout_width="@dimen/_12ssp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:elevation="@dimen/_20sdp"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@id/cv_request_img"
+        app:layout_constraintEnd_toEndOf="@id/cv_request"
+        app:layout_constraintTop_toTopOf="@id/cv_request_img"
+        app:tint="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_accept"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:backgroundTint="@android:color/transparent"
+        android:clickable="true"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cv_decline"
+        app:layout_constraintStart_toStartOf="@id/cv_request"
+        app:layout_constraintTop_toBottomOf="@id/tv_request" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_decline"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:backgroundTint="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="0dp"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="@id/cv_request"
+        app:layout_constraintStart_toEndOf="@id/cv_accept"
+        app:layout_constraintTop_toBottomOf="@id/tv_request" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="#2F6991"
+        app:layout_constraintBottom_toTopOf="@id/cv_accept"
+        app:layout_constraintEnd_toEndOf="@id/cv_request"
+        app:layout_constraintStart_toStartOf="@id/cv_request" />
+
+    <View
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="0dp"
+        android:background="#2F6991"
+        app:layout_constraintBottom_toBottomOf="@id/cv_accept"
+        app:layout_constraintEnd_toStartOf="@id/cv_decline"
+        app:layout_constraintStart_toEndOf="@id/cv_accept"
+        app:layout_constraintTop_toTopOf="@id/cv_accept" />
+
+    <ImageView
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:src="@drawable/ic_tick"
+        app:tint="#1A93E6"
+        android:id="@+id/iv_tick"
+        app:layout_constraintEnd_toStartOf="@id/tv_accept"
+        app:layout_constraintStart_toStartOf="@id/cv_accept"
+        app:layout_constraintTop_toTopOf="@id/cv_accept"
+        app:layout_constraintBottom_toBottomOf="@id/cv_accept"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accept"
+        android:textColor="#1A93E6"
+        android:id="@+id/tv_accept"
+        app:layout_constraintStart_toEndOf="@id/iv_tick"
+        app:layout_constraintTop_toTopOf="@id/cv_accept"
+        app:layout_constraintBottom_toBottomOf="@id/cv_accept"
+        app:layout_constraintEnd_toEndOf="@id/cv_accept"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:textSize="@dimen/_14ssp"/>
+
+    <ImageView
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_12sdp"
+        android:src="@drawable/ic_cancel"
+        app:tint="#FF4545"
+        android:id="@+id/iv_cross"
+        app:layout_constraintEnd_toStartOf="@id/tv_decline"
+        app:layout_constraintStart_toStartOf="@id/cv_decline"
+        app:layout_constraintTop_toTopOf="@id/cv_decline"
+        app:layout_constraintBottom_toBottomOf="@id/cv_decline"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/decline"
+        android:textColor="#FF4545"
+        android:id="@+id/tv_decline"
+        app:layout_constraintStart_toEndOf="@id/iv_cross"
+        app:layout_constraintTop_toTopOf="@id/cv_decline"
+        app:layout_constraintBottom_toBottomOf="@id/cv_decline"
+        app:layout_constraintEnd_toEndOf="@id/cv_decline"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:textSize="@dimen/_14ssp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

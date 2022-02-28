@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboard_nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.startFragment.StartFragment"
+        android:label="start_fragment"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFrag_to_addIdentityFrag"
+            app:destination="@id/addIdentityFagment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addIdentityFagment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.addIdentitySelection.AddIdentitySelectionFragment"
+        android:label="add_identity_fragment"
+        tools:layout="@layout/fragment_add_identity_selection" >
+        <action
+            android:id="@+id/action_homeFragment2_to_enterNameFragment"
+            app:destination="@id/enterNameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterNameFragment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.enterNameFragment.EnterNameFragment"
+        android:label="enter_name_fragment"
+        tools:layout="@layout/fragment_enter_name" >
+        <action
+            android:id="@+id/action_enterNameFrag_to_enterIdFrag"
+            app:destination="@id/enterIdFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterIdFragment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.enterIdNumber.EnterIdNumberFragment"
+        android:label="enter_id_fragment"
+        tools:layout="@layout/fragment_enter_id_number" >
+        <action
+            android:id="@+id/action_enterIdFrag_to_enterPhoneFrag"
+            app:destination="@id/enterPhoneFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/enterPhoneFragment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.enterPhoneNumber.EnterPhoneFragment"
+        android:label="enter_phone_fragment"
+        tools:layout="@layout/fragment_enter_phone" >
+        <action
+            android:id="@+id/action_phoneFrag_to_otpFragment"
+            app:destination="@id/otpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.otpFragment.otpFragment"
+        android:label="otp_fragment"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_homeFragment2_to_addFragment"
+            app:destination="@id/scanFaceStartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanFaceStartFragment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.faceScanStartFragment.FaceScanStartFragment"
+        android:label="otp_fragment"
+        tools:layout="@layout/fragment_face_scan_start" >
+        <action
+            android:id="@+id/action_homeFragment2_to_addFragment"
+            app:destination="@id/scanFingerStartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanFingerStartFragment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.fingerScanFragment.FingerScanFragment"
+        android:label="finger_scan_fragment"
+        tools:layout="@layout/fragment_finger_scan" >
+        <action
+            android:id="@+id/action_homeFragment2_to_addFragment"
+            app:destination="@id/accountSuccessFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountSuccessFragment"
+        android:name="com.fourio.twynapp.ui.onBoardingProcess.accountSuccessFragment.AccountSuccessFragment"
+        android:label="account_success_fragment"
+        tools:layout="@layout/fragment_account_success" >
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment2_to_addFragment"-->
+<!--            app:destination="@id/addFragment" />-->
+    </fragment>
+
+</navigation>

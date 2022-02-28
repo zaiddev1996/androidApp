@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_frag_bg"
+    tools:context=".ui.onBoardingProcess.addIdentitySelection.AddIdentitySelectionFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_65sdp"
+            android:background="@color/light_blue"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_back" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/josefinsanssemibold"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+
+            app:layout_constraintStart_toEndOf="@id/back_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_create_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/josefinsanssemibold"
+            android:text="@string/create_an_acc"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_heading_add_identity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/josefinsanssemibold"
+            android:text="@string/add_identity_provider"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_23ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_header" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Identity_providers"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_250sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading_add_identity"
+            app:spanCount="3"
+            tools:itemCount="20"
+            tools:listitem="@layout/identity_provider_item" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:background="@drawable/bottom_shade_overlay_light"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <include
+            android:id="@+id/included_btn"
+            layout="@layout/yellow_continue_btn"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Twyn App</string>
+    <string name="face_login">Face Login</string>
+    <string name="face_scan">Face Scan</string>
+    <string name="fingerprint_login">Fingerprint Login</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="create_your_twyn">Create Your Twyn</string>
+    <string name="recover_your_twyn">Recover Your Twyn</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="terms_and_conditions_text">Suspendisse ac quam in lacus volutpat mollis. Sed varius venenatis erat, et eleifend ante convallis quis. Integer non sapien non velit accumsan tincidunt sed vel elit. Donec lorem libero, luctus in venenatis nec, finibus ut sem. Vivamus condimentum cursus sagittis. In tempus est urna, feugiat feugiat erat sagittis sit amet. Morbi velit ex, aliquet ut consequat vitae, egestas vitae orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean tincidunt sodales libero, quis eleifend erat gravida eget. Curabitur egestas non nisi vel eleifend. Aenean eget justo sapien. Donec tortor enim, fermentum eu sagittis ut, imperdiet ut augue. In efficitur ultricies justo nec imperdiet.
+
+Duis vel commodo dolor. Integer fringilla orci vitae odio pharetra imperdiet. Vivamus fringilla aliquam dignissim. Etiam nisi magna, gravida a elit non, finibus bibendum ante. Quisque quis nisi non quam tempor iaculis. Pellentesque quis ex sed odio laoreet gravida a ut purus. Morbi aliquam nunc eget mauris imperdiet, et molestie mauris congue. Maecenas ut justo nibh. Morbi sit amet risus tellus. Proin laoreet nec velit vitae egestas. Nam imperdiet ac augue gravida porttitor.
+
+Nunc ultricies posuere nisl quis faucibus. Sed vitae eleifend est. Phasellus eu enim lobortis nulla dapibus varius. Donec sit amet turpis pharetra, aliquam ex et, finibus ligula. Integer id sem vel nibh feugiat imperdiet. Ut nunc nunc, mattis in imperdiet sed, cursus ut ante. Quisque eleifend sed libero eu pharetra. Pellentesque bibendum nunc et egestas aliquam. Nunc pharetra arcu quis malesuada mattis. Morbi ut placerat dolor, a semper nibh. Etiam condimentum massa et mattis pellentesque. Maecenas pellentesque ornare arcu nec semper. Nulla facilisis rhoncus purus sed sodales.</string>
+    <string name="i_agree_to_terms">I agree to all terms</string>
+    <string name="back">Back</string>
+    <string name="create_an_acc">Create an account</string>
+    <string name="lets_create_digital_id">Let\'s create your new digital ID</string>
+    <string name="start_frag_desc">Vivamus ut eleifend leo, sit amet luctus diam. Nullam consectetur ligula ut orci accumsan sagittis. </string>
+    <string name="add_identity_provider">Add Identity provider selection</string>
+    <string name="add_info">Add Info</string>
+    <string name="scan_face">Scan Face</string>
+    <string name="scan_fingerprint">Scan Fingerprint</string>
+    <string name="what_nick_name">What is your nick name?</string>
+    <string name="what_id_number">What is your ID number?</string>
+    <string name="what_phone_number">What is your phone number?</string>
+    <string name="nick_name">nick name</string>
+    <string name="id_number">id number</string>
+    <string name="id_number_hint">XXX-XXX</string>
+    <string name="next">Next</string>
+    <string name="security_verification">Security Verification</string>
+    <string name="phone_verification_code">Phone verification code</string>
+    <string name="email_verification_code">Email verification code</string>
+    <string name="send">Send</string>
+    <string name="submit">Submit</string>
+    <string name="no_hat">No hat</string>
+    <string name="skip">Skip</string>
+    <string name="no_sunglasses">No sunglasses</string>
+    <string name="room_has_bright_ligth">Room has bright light</string>
+    <string name="face_the_camera">Face the camera</string>
+    <string name="face_scan_instruction_heading">Follow the instructions when scanning your face</string>
+    <string name="finger_scan_instruction_heading">Follow the following intructions when scanning your fingerprints</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="twyn_created">Your Twyn Has Been Created</string>
+    <string name="here_first_badge">Here\'s your first badge</string>
+    <string name="home">Home</string>
+    <string name="services">Services</string>
+    <string name="history">History</string>
+    <string name="settings">Settings</string>
+    <string name="capture_document">Capture Document</string>
+    <string name="capture_face">Capture Face</string>
+    <string name="read_data">Read Data</string>
+    <string name="share_twyn">Share Twyn</string>
+    <string name="my_scores">My Scores</string>
+    <string name="my_feed">My Feed</string>
+    <string name="face_verification_request">Face verification request</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="decline">Decline</string>
+    <string name="history_of_identity">History of identity</string>
+    <string name="rate_this_app">Rate this app</string>
+    <string name="rate_app_desc">Integer quis dictum tellus, a auctor lorem. Cras in blandit leo.</string>
+    <string name="really_bad">Really Bad</string>
+    <string name="bad">Bad</string>
+    <string name="okay">Okay</string>
+    <string name="good">Good</string>
+    <string name="really_good">Really Good</string>
+    <string name="acc_settings">Account Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="privacy_and_security">Privacy and Security</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="about">About</string>
+
+    <string-array name="planets_array">
+        <item>+212</item>
+        <item>+424</item>
+        <item>+92</item>
+        <item>+323</item>
+        <item>+432</item>
+        <item>+433</item>
+        <item>+133</item>
+        <item>+444</item>
+    </string-array>
+</resources>

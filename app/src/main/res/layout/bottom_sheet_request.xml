@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_270sdp"
+    android:background="@drawable/dark_blue_top_cornered_bg"
+    android:backgroundTint="#115581"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/_270sdp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_img"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:backgroundTint="#F9DC31"
+        app:cardCornerRadius="@dimen/_50sdp"
+        app:cardElevation="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/_13sdp"
+            android:src="@drawable/bank_img" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:text="Bank of Brazil request a face scan from you"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_img" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_accept"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@drawable/blue_btn_bg_gradient"
+        android:drawableStart="@drawable/ic_tick"
+        android:drawablePadding="@dimen/_minus20sdp"
+        android:drawableTint="@color/white"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:text="Accept"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toStartOf="@id/btn_decline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_request" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_decline"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/red_btn_bg_gradient"
+        android:drawableStart="@drawable/ic_cancel"
+        android:drawablePadding="@dimen/_minus20sdp"
+        android:drawableTint="@color/white"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:text="Decline"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_accept"
+        app:layout_constraintTop_toBottomOf="@id/tv_request" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

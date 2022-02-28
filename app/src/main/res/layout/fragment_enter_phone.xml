@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_frag_bg"
+    tools:context=".ui.onBoardingProcess.enterPhoneNumber.EnterPhoneFragment">
+
+    <View
+        android:id="@+id/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:background="@color/light_blue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="@dimen/_7sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/tv_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_back" />
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+
+        app:layout_constraintStart_toEndOf="@id/back_arrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_create_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="@string/create_an_acc"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_top_steps"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/light_blue"
+        app:layout_constraintTop_toBottomOf="@id/view_header" />
+
+    <ImageView
+        android:id="@+id/iv_user_avatar"
+        android:layout_width="@dimen/_12sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_user_avatar"
+        app:layout_constraintEnd_toEndOf="@id/tv_add_info"
+        app:layout_constraintStart_toStartOf="@id/tv_add_info"
+        app:layout_constraintTop_toTopOf="@id/view_top_steps" />
+
+    <TextView
+        android:id="@+id/tv_add_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/josefinsansbold"
+        android:text="@string/add_info"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toStartOf="@id/tv_scan_face"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_user_avatar" />
+
+    <ImageView
+        android:id="@+id/iv_icon_face"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_face_login"
+        app:layout_constraintEnd_toEndOf="@id/tv_scan_face"
+        app:layout_constraintStart_toStartOf="@id/tv_scan_face"
+        app:layout_constraintTop_toTopOf="@id/view_top_steps" />
+
+    <TextView
+        android:id="@+id/tv_scan_face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/josefinsansbold"
+        android:text="@string/scan_face"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_face" />
+
+    <ImageView
+        android:id="@+id/iv_icon_finger"
+        android:layout_width="@dimen/_13sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_finger_print_login"
+        app:layout_constraintEnd_toEndOf="@id/tv_scan_finger"
+        app:layout_constraintStart_toStartOf="@id/tv_scan_finger"
+        app:layout_constraintTop_toTopOf="@id/view_top_steps" />
+
+    <TextView
+        android:id="@+id/tv_scan_finger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/josefinsansbold"
+        android:text="@string/scan_fingerprint"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_scan_face"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_finger" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:background="#40FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/view_top_steps" />
+
+    <View
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/view_top_steps"
+        app:layout_constraintEnd_toEndOf="@id/tv_add_info"
+        app:layout_constraintStart_toStartOf="@id/tv_add_info" />
+
+    <TextView
+        android:id="@+id/tv_heading_what_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:lineSpacingExtra="@dimen/_10sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:text="@string/what_phone_number"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_steps" />
+
+    <TextView
+        android:id="@+id/tv_heading_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:paddingStart="@dimen/_20sdp"
+        android:text="@string/id_number"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="@id/tv_heading_what_full_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_what_full_name" />
+
+    <Spinner
+        android:id="@+id/phone_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:paddingEnd="0dp"
+        app:layout_constraintEnd_toStartOf="@id/et_nick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_nick" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#80FFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/phone_spinner"
+        app:layout_constraintStart_toStartOf="@id/phone_spinner"
+        app:layout_constraintTop_toBottomOf="@id/phone_spinner" />
+
+    <EditText
+        android:id="@+id/et_nick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:backgroundTint="#80FFFFFF"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:hint="@string/id_number_hint"
+        android:inputType="number"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_13sdp"
+        android:textColor="#80FFFFFF"
+        android:textColorHint="#80FFFFFF"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/phone_spinner"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_nick" />
+
+    <include
+        android:id="@+id/btn_next"
+        layout="@layout/yellow_continue_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_nick" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

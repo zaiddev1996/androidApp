@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:backgroundTint="@color/app_yellow"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_9sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_12sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:text="Let's Start"
+        android:textColor="@color/black_shade_1"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_yellow"
+        app:layout_constraintEnd_toStartOf="@id/iv_arrow_right"
+        app:layout_constraintHorizontal_chainStyle="packed"
+
+        app:layout_constraintStart_toStartOf="@id/cv_yellow"
+        app:layout_constraintTop_toTopOf="@id/cv_yellow" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_right"
+        android:layout_width="@dimen/_7sdp"
+        android:layout_height="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:elevation="@dimen/_12sdp"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@id/tv_btn"
+        app:layout_constraintEnd_toEndOf="@id/cv_yellow"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/tv_btn"
+        app:layout_constraintTop_toTopOf="@id/tv_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

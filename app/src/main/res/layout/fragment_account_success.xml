@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_frag_bg"
+    tools:context=".ui.onBoardingProcess.accountSuccessFragment.AccountSuccessFragment">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:src="@drawable/logo_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_success"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400sdp"
+        android:layout_margin="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <ImageView
+        android:id="@+id/iv_artwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:elevation="@dimen/_12sdp"
+        android:src="@drawable/ic_success_artwork"
+        app:layout_constraintEnd_toEndOf="@id/cv_success"
+        app:layout_constraintStart_toStartOf="@id/cv_success"
+        app:layout_constraintTop_toTopOf="@id/cv_success" />
+
+    <TextView
+        android:id="@+id/tv_twyn_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:elevation="@dimen/_12sdp"
+        android:fontFamily="@font/josefinsanssemibold"
+        android:lineSpacingExtra="@dimen/_10sdp"
+        android:paddingStart="@dimen/_40sdp"
+        android:paddingEnd="@dimen/_40sdp"
+        android:text="@string/twyn_created"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="@id/cv_success"
+        app:layout_constraintStart_toStartOf="@id/cv_success"
+        app:layout_constraintTop_toBottomOf="@id/iv_artwork" />
+
+    <View
+        android:id="@+id/view_horizontal_divider"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@drawable/horizontal_gradient_divider_light"
+        app:layout_constraintStart_toStartOf="@id/cv_success"
+        app:layout_constraintEnd_toEndOf="@id/cv_success"
+        android:elevation="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/tv_twyn_created" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/here_first_badge"
+        android:textColor="@color/medium_blue"
+        app:layout_constraintStart_toStartOf="@id/cv_success"
+        app:layout_constraintEnd_toEndOf="@id/cv_success"
+        app:layout_constraintTop_toBottomOf="@id/view_horizontal_divider"
+        android:elevation="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textSize="@dimen/_14ssp"
+        android:textAllCaps="true"
+        android:id="@+id/tv_here_your_badge"
+        android:fontFamily="@font/josefinsanssemibold"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_badge"
+        android:id="@+id/iv_badge"
+        app:layout_constraintTop_toBottomOf="@id/tv_here_your_badge"
+        app:layout_constraintStart_toStartOf="@id/cv_success"
+        app:layout_constraintEnd_toEndOf="@id/cv_success"
+        android:elevation="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+    <include
+        layout="@layout/blue_continue_btn"
+        android:id="@+id/included_btn"
+        app:layout_constraintTop_toBottomOf="@id/iv_badge"
+        app:layout_constraintStart_toStartOf="@id/cv_success"
+        app:layout_constraintEnd_toEndOf="@id/cv_success"
+        android:layout_width="@dimen/_165sdp"
+        android:layout_height="@dimen/_80sdp"
+        app:elevation="@dimen/_12sdp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

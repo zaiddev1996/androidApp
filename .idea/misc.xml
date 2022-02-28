@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../../../layout/custom_preview.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/bg_blue_circle_gradient.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/bg_circle_filler_blue.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/blue_btn_bg_gradient.xml" value="0.18223948080710795" />
+        <entry key="app/src/main/res/drawable/blue_gradient_btn.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/bottom_nav_bg.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/bottom_shade_overlay.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/bottom_shade_overlay_light.xml" value="0.28584474885844746" />
+        <entry key="app/src/main/res/drawable/dark_blue_top_cornered_bg.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/dark_gradient_screen_bg.xml" value="0.2114864864864865" />
+        <entry key="app/src/main/res/drawable/horizontal_gradient_divider.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/horizontal_gradient_divider_light.xml" value="0.16047297297297297" />
+        <entry key="app/src/main/res/drawable/ic_badge.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/ic_cancel.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/ic_face_img_overlay.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/ic_logo_white.xml" value="0.3260416666666667" />
+        <entry key="app/src/main/res/drawable/ic_three_star_badge.xml" value="0.4841527641170261" />
+        <entry key="app/src/main/res/drawable/ic_tick.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/item_score_bg_blue.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/light_frag_bg.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/light_stroke.xml" value="0.28584474885844746" />
+        <entry key="app/src/main/res/drawable/nav_item_selector.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/red_btn_bg_gradient.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/stroke_rounded.xml" value="0.28584474885844746" />
+        <entry key="app/src/main/res/drawable/terms_conditions_screen_bg.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/verticle_gradient_divider.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/verticle_gradient_divider_light.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/drawable/verticle_gradient_light.xml" value="0.16047297297297297" />
+        <entry key="app/src/main/res/drawable/white_filled_circle.xml" value="0.2093645484949833" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_on_boarding_process.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_swipper.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.20101351351351351" />
+        <entry key="app/src/main/res/layout/blue_continue_btn.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/bottom_sheet_request.xml" value="0.20101351351351351" />
+        <entry key="app/src/main/res/layout/bottom_sheet_review.xml" value="0.1918918918918919" />
+        <entry key="app/src/main/res/layout/feed_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_account_success.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add_identity_selection.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_enter_id_number.xml" value="0.27546296296296297" />
+        <entry key="app/src/main/res/layout/fragment_enter_name.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_enter_phone.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_face_scan_start.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_finger_scan.xml" value="0.20101351351351351" />
+        <entry key="app/src/main/res/layout/fragment_history.xml" value="0.20101351351351351" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1423611111111111" />
+        <entry key="app/src/main/res/layout/fragment_otp.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_services.xml" value="0.2123654000922028" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.20101351351351351" />
+        <entry key="app/src/main/res/layout/fragment_start.xml" value="0.20101351351351351" />
+        <entry key="app/src/main/res/layout/guage_graph_item.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/history_item.xml" value="0.20101351351351351" />
+        <entry key="app/src/main/res/layout/identity_provider_item.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/phone_spinner_item.xml" value="0.27546296296296297" />
+        <entry key="app/src/main/res/layout/yellow_continue_btn.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/dashboard_navigation_items.xml" value="0.20101351351351351" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
