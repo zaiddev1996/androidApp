@@ -9,8 +9,13 @@ import android.view.WindowManager
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.WindowCompat
 import com.fourio.twynapp.R
+import com.fourio.twynapp.adapters.FeedAdapter
+import com.fourio.twynapp.adapters.SwipeCardAdapter
 import com.fourio.twynapp.databinding.ActivitySwipperBinding
 import com.fourio.twynapp.ui.dashboard.DashboardActivity
+import com.yuyakaido.android.cardstackview.CardStackLayoutManager
+import com.yuyakaido.android.cardstackview.CardStackView
+import com.yuyakaido.android.cardstackview.Direction
 
 class SwipperActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySwipperBinding
@@ -25,6 +30,34 @@ class SwipperActivity : AppCompatActivity() {
         binding.cvSkip.setOnClickListener {
             startActivity(Intent(this, DashboardActivity::class.java))
         }
+
+        val  arrayList = ArrayList<String>()
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+        arrayList.add("test")
+
+       binding.cvBankDetails
+        val cardStackLayoutManager = CardStackLayoutManager(this)
+        cardStackLayoutManager.setDirections(Direction.HORIZONTAL)
+        cardStackLayoutManager.setSwipeThreshold(0.1f)
+        binding.cvBankDetails.layoutManager = cardStackLayoutManager
+
+        val feedAdapter= SwipeCardAdapter(){
+
+        }
+        binding.cvBankDetails.adapter = feedAdapter
+        feedAdapter.submitList(arrayList)
+
     }
 
     private fun setFullscreen() {

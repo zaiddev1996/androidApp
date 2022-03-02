@@ -71,6 +71,7 @@ Nunc ultricies posuere nisl quis faucibus. Sed vitae eleifend est. Phasellus eu 
     <string name="privacy_and_security">Privacy and Security</string>
     <string name="help_and_support">Help and Support</string>
     <string name="about">About</string>
+    <string name="faq">Faq</string>
 
     <string-array name="planets_array">
         <item>+212</item>

@@ -47,6 +47,7 @@
         <entry key="app/src/main/res/layout/fragment_enter_name.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_enter_phone.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_face_scan_start.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_faq.xml" value="0.1918918918918919" />
         <entry key="app/src/main/res/layout/fragment_finger_scan.xml" value="0.20101351351351351" />
         <entry key="app/src/main/res/layout/fragment_history.xml" value="0.20101351351351351" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1423611111111111" />
@@ -57,7 +58,9 @@
         <entry key="app/src/main/res/layout/guage_graph_item.xml" value="0.5" />
         <entry key="app/src/main/res/layout/history_item.xml" value="0.20101351351351351" />
         <entry key="app/src/main/res/layout/identity_provider_item.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/item_faq.xml" value="0.20844594594594595" />
         <entry key="app/src/main/res/layout/phone_spinner_item.xml" value="0.27546296296296297" />
+        <entry key="app/src/main/res/layout/swipe_card_item.xml" value="0.20844594594594595" />
         <entry key="app/src/main/res/layout/yellow_continue_btn.xml" value="0.25" />
         <entry key="app/src/main/res/menu/dashboard_navigation_items.xml" value="0.20101351351351351" />
       </map>

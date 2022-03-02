@@ -157,8 +157,8 @@
                 app:layout_constraintStart_toEndOf="@id/iv_acc_dark_mode"
                 app:layout_constraintTop_toTopOf="@id/iv_acc_dark_mode" />
 
-            <ImageView
-                android:layout_width="@dimen/_10sdp"
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/_14sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 android:src="@drawable/ic_arrow_right"
@@ -253,6 +253,16 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iv_support"
                 app:tint="#80FFFFFF" />
+
+            <View
+                android:id="@+id/view_support"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="?android:attr/selectableItemBackground"
+                app:layout_constraintBottom_toTopOf="@id/divider_5"
+                app:layout_constraintTop_toBottomOf="@id/divider_4" />
 
             <View
                 android:id="@+id/divider_5"

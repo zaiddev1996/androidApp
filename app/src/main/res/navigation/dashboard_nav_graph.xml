@@ -29,4 +29,9 @@
         android:label="settings_fragment"
         tools:layout="@layout/fragment_settings"/>
 
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.fourio.twynapp.ui.dashboard.faq.FaqFragment"
+        android:label="faq_fragment"
+        tools:layout="@layout/fragment_faq"/>
 </navigation>

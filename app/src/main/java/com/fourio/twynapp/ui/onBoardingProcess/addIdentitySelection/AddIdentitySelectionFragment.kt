@@ -2,6 +2,7 @@ package com.fourio.twynapp.ui.onBoardingProcess.addIdentitySelection
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.fourio.twynapp.R
 import com.fourio.twynapp.adapters.IdentityProvidersAdapter
 import com.fourio.twynapp.databinding.FragmentAddIdentitySelectionBinding
+import com.fourio.twynapp.model.IdentityFeed
+import com.fourio.twynapp.model.IdentityHistory
+import com.fourio.twynapp.model.IdentityProviders
+import com.google.gson.Gson
+import java.io.*
 
 
 class AddIdentitySelectionFragment : Fragment() {
@@ -21,7 +27,7 @@ class AddIdentitySelectionFragment : Fragment() {
 // onDestroyView.
     private val binding get() = _binding!!
     private lateinit var identityProvidersAdapter: IdentityProvidersAdapter
-    private lateinit var arrayList : ArrayList<Boolean>
+    private lateinit var arrayList : List<IdentityProviders.Providers>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,28 +41,8 @@ class AddIdentitySelectionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.rvIdentityProviders.apply {
-             arrayList = ArrayList()
-            arrayList.add(true)
-            arrayList.add(true)
-            arrayList.add(false)
-            arrayList.add(true)
-            arrayList.add(false)
-            arrayList.add(false)
-            arrayList.add(true)
-            arrayList.add(false)
-            arrayList.add(false)
-            arrayList.add(true)
-            arrayList.add(true)
-            arrayList.add(true)
-            arrayList.add(false)
-            arrayList.add(true)
-            arrayList.add(false)
-            arrayList.add(true)
-            arrayList.add(false)
-            arrayList.add(true)
-            arrayList.add(false)
-            arrayList.add(true)
-            arrayList.add(false)
+
+
             identityProvidersAdapter = IdentityProvidersAdapter {
                onItemClick(it)
 
@@ -65,8 +51,10 @@ class AddIdentitySelectionFragment : Fragment() {
             val gridLayoutManager = GridLayoutManager(activity, 3)
             layoutManager = gridLayoutManager
 
-            identityProvidersAdapter.submitList(arrayList)
+
         }
+
+        readVerificationsJson()
 
         binding.includedBtn.cvYellow.setOnClickListener {
             findNavController().navigate(R.id.enterNameFragment)
@@ -83,10 +71,31 @@ class AddIdentitySelectionFragment : Fragment() {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun onItemClick(position: Int) {
-        arrayList[position] = !arrayList[position]
+        arrayList.get(position).selected = !arrayList[position].selected
         identityProvidersAdapter.submitList(arrayList)
         identityProvidersAdapter.notifyDataSetChanged()
     }
 
+
+    fun readVerificationsJson(){
+        val istream: InputStream = resources.openRawResource(R.raw.identity_providers)
+        val writer: Writer = StringWriter()
+        val buffer = CharArray(1024)
+        try {
+            val reader: Reader = BufferedReader(InputStreamReader(istream, "UTF-8"))
+            var n: Int
+            while (reader.read(buffer).also { n = it } != -1) {
+                writer.write(buffer, 0, n)
+            }
+        } finally {
+            istream.close()
+        }
+        val jsonString: String = writer.toString()
+        val gson = Gson()
+        val identityFeed: IdentityProviders = gson.fromJson(jsonString, IdentityProviders::class.java)
+        Log.e("JSON_FILE", jsonString)
+        arrayList =  identityFeed.identity_providers
+        identityProvidersAdapter.submitList(arrayList)
+    }
 
 }
