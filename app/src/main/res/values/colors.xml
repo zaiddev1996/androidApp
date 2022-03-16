@@ -19,5 +19,7 @@
     <color name="light_green">#43FF82</color>
     <color name="medium_blue">#1A93E6</color>
     <color name="dark_green">#00584F</color>
+    <color name="navigation_bar_color">#0081DB</color>
+
 <!--    <color name="navigation_selector_color">@drawab;e/nav_item_selector</color>-->
 </resources>

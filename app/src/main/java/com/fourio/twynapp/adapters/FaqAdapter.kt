@@ -12,7 +12,7 @@ import com.fourio.twynapp.databinding.ItemFaqBinding
 
 
 class FaqAdapter(private val context: Context, private val callback: (Int) -> Unit) :
-    ListAdapter<Boolean, FaqAdapter.ViewHolder>(DiffCallback()) {
+    ListAdapter<Boolean, com.fourio.twynapp.adapters.FaqAdapter.ViewHolder>(com.fourio.twynapp.adapters.FaqAdapter.DiffCallback()) {
 
 
     class ViewHolder(
@@ -40,13 +40,17 @@ class FaqAdapter(private val context: Context, private val callback: (Int) -> Un
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): com.fourio.twynapp.adapters.FaqAdapter.ViewHolder {
         val v = ItemFaqBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(v, callback,context)
+        return com.fourio.twynapp.adapters.FaqAdapter.ViewHolder(
+            v,
+            callback,
+            context
+        )
     }
 
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: com.fourio.twynapp.adapters.FaqAdapter.ViewHolder, position: Int) {
         val currentLeague = getItem(position)
         holder.bind(currentLeague)
         holder.setIsRecyclable(false)

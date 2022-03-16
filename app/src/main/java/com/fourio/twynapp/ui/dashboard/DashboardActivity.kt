@@ -1,6 +1,5 @@
 package com.fourio.twynapp.ui.dashboard
 
-import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -34,6 +33,7 @@ class DashboardActivity : AppCompatActivity() {
         }, 10000)
 
 
+        window.navigationBarColor = (resources.getColor(R.color.navigation_bar_color));
     }
 
     private fun setListeners() {

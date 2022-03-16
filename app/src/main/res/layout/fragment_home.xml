@@ -32,6 +32,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/tv_nick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
@@ -252,17 +253,19 @@
                 app:layout_constraintTop_toTopOf="@id/iv_ic_scores_filled" />
 
             <HorizontalScrollView
+                android:id="@+id/scroll_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scrollbars="none"
-                app:layout_constraintTop_toBottomOf="@id/iv_ic_scores_filled"
                 app:layout_constraintStart_toStartOf="parent"
-                android:id="@+id/scroll_score">
+                app:layout_constraintTop_toBottomOf="@id/iv_ic_scores_filled">
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+
                     <include
-                        android:id="@+id/guage_view_doc"
+                        android:id="@+id/guage_view_face"
                         layout="@layout/guage_graph_item"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -278,11 +281,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_minus15sdp"
                         android:layout_marginTop="@dimen/_15sdp"
-                        app:layout_constraintStart_toEndOf="@+id/guage_view_doc"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintStart_toEndOf="@+id/guage_view_face"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <include
-                        android:id="@+id/guage_view_face"
+                        android:id="@+id/guage_view_doc"
                         layout="@layout/guage_graph_item"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -293,7 +296,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </HorizontalScrollView>
-
 
 
             <View

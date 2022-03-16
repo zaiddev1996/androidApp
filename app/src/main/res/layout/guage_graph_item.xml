@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/view_doc_score_bg"
@@ -31,6 +31,7 @@
         app:layout_constraintTop_toTopOf="@id/view_doc_score_bg" />
 
     <TextView
+        android:id="@+id/tv_graph_type"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
@@ -38,7 +39,7 @@
         android:layout_marginBottom="@dimen/_10sdp"
         android:fontFamily="@font/josefinsanssemibold"
         android:lineSpacingExtra="@dimen/_5sdp"
-        android:text="Total Documents Scanned"
+        android:text="Face Scan Score"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="@dimen/_11ssp"
@@ -47,12 +48,13 @@
         app:layout_constraintStart_toStartOf="@id/view_doc_score_bg" />
 
     <RatingBar
+        android:id="@+id/rb_graph_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_minus25sdp"
         android:isIndicator="true"
         android:progressTint="@color/app_yellow"
-        android:rating="2"
+        android:rating="0"
         android:scaleX="0.4"
         android:scaleY="0.4"
         android:stepSize="0.1"
@@ -84,6 +86,7 @@
         app:layout_constraintTop_toTopOf="@id/guage_view" />
 
     <ImageView
+        android:id="@+id/iv_graph_type"
         android:layout_width="@dimen/_16sdp"
         android:layout_height="@dimen/_16sdp"
         android:elevation="@dimen/_11sdp"

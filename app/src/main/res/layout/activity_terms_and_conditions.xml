@@ -7,45 +7,108 @@
     android:background="@drawable/terms_conditions_screen_bg"
     tools:context=".ui.termsAndConditions.TermsAndConditions">
 
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="@dimen/_151sdp"
-        android:layout_height="@dimen/_101sdp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/logo_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_heading_terms"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_minus15sdp"
-        android:fontFamily="@font/josefinsanssemibold"
-        android:text="@string/terms_and_conditions"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_20ssp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tv_terms_and_conditions"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:lineSpacingExtra="@dimen/_10ssp"
-        android:overScrollMode="ifContentScrolls"
-        android:paddingStart="@dimen/_20sdp"
-        android:paddingEnd="@dimen/_15sdp"
-        android:text="@string/terms_and_conditions_text"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_12ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_heading_terms" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/_151sdp"
+                android:layout_height="@dimen/_101sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_heading_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_minus15sdp"
+                android:fontFamily="@font/josefinsanssemibold"
+                android:text="@string/terms_and_conditions"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+            <TextView
+                android:id="@+id/tv_terms_and_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:lineSpacingExtra="@dimen/_10ssp"
+                android:paddingStart="@dimen/_20sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:text="@string/terms_and_conditions_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_heading_terms" />
+
+            <ImageView
+                android:id="@+id/iv_persons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:src="@drawable/ic_t_a_c_img_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_terms_and_conditions" />
+
+            <TextView
+                android:id="@+id/tv_terms_and_conditions_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:lineSpacingExtra="@dimen/_10ssp"
+                android:text="@string/terms_and_conditions_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_persons"
+                app:layout_constraintTop_toTopOf="@id/iv_persons" />
+
+            <ImageView
+                android:id="@+id/iv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:src="@drawable/ic_weight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_terms_and_conditions_person" />
+
+            <TextView
+                android:id="@+id/tv_terms_and_conditions_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:lineSpacingExtra="@dimen/_10ssp"
+                android:text="@string/terms_and_conditions_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_weight"
+                app:layout_constraintTop_toTopOf="@id/iv_weight" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 
     <View
         android:layout_width="match_parent"

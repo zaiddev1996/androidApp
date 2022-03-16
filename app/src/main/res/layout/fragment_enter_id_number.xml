@@ -170,21 +170,21 @@
         app:layout_constraintTop_toBottomOf="@id/tv_heading_what_full_name" />
 
     <EditText
-        android:id="@+id/et_nick"
+        android:id="@+id/et_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
-        android:inputType="number"
         android:backgroundTint="#80FFFFFF"
         android:fontFamily="@font/josefinsanssemibold"
-        android:paddingStart="@dimen/_10sdp"
         android:hint="@string/id_number_hint"
-        android:textColorHint="#80FFFFFF"
+        android:inputType="number"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
         android:paddingEnd="@dimen/_10sdp"
         android:paddingBottom="@dimen/_13sdp"
-        android:paddingTop="@dimen/_5sdp"
         android:textColor="#80FFFFFF"
+        android:textColorHint="#80FFFFFF"
         android:textSize="@dimen/_20ssp"
         app:layout_constraintTop_toBottomOf="@id/tv_heading_nick" />
 
@@ -195,7 +195,7 @@
         android:layout_height="@dimen/_80sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_nick" />
+        app:layout_constraintTop_toBottomOf="@id/et_id" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

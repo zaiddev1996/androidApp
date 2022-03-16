@@ -177,8 +177,10 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_38sdp"
         android:layout_marginStart="@dimen/_20sdp"
+        android:paddingStart="0dp"
         android:paddingEnd="0dp"
-        app:layout_constraintEnd_toStartOf="@id/et_nick"
+        android:popupBackground="@color/light_blue"
+        app:layout_constraintEnd_toStartOf="@id/et_phone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_heading_nick" />
 
@@ -191,7 +193,7 @@
         app:layout_constraintTop_toBottomOf="@id/phone_spinner" />
 
     <EditText
-        android:id="@+id/et_nick"
+        android:id="@+id/et_phone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_20sdp"
@@ -217,7 +219,7 @@
         android:layout_height="@dimen/_80sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_nick" />
+        app:layout_constraintTop_toBottomOf="@id/et_phone" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

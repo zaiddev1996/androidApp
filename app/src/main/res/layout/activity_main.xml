@@ -1,188 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@drawable/dark_gradient_screen_bg"
-    tools:context=".ui.MainActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/img_faces"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_272sdp"
-        android:layout_marginTop="@dimen/_minus60sdp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/main_person_img"
-        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_face_img_overlay"
-        app:layout_constraintBottom_toBottomOf="@id/img_faces" />
-
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/main_screen_bg_overlay" />
-
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_150sdp"
-        android:src="@drawable/logo_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/view_face_login"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:background="@drawable/bg_blue_circle_gradient"
-        app:layout_constraintEnd_toStartOf="@id/view_verticle_divider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_faces" />
-
-    <ImageView
-        android:layout_width="@dimen/_22sdp"
-        android:layout_height="@dimen/_22sdp"
-        android:src="@drawable/ic_face_login"
-        app:layout_constraintBottom_toBottomOf="@id/view_face_login"
-        app:layout_constraintEnd_toEndOf="@id/view_face_login"
-        app:layout_constraintStart_toStartOf="@id/view_face_login"
-        app:layout_constraintTop_toTopOf="@id/view_face_login" />
-
-    <TextView
-        android:id="@+id/tv_face_login"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:fontFamily="@font/josefinsanssemibold"
-        android:text="@string/face_login"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_11sdp"
-        app:layout_constraintEnd_toEndOf="@id/view_face_login"
-        app:layout_constraintStart_toStartOf="@id/view_face_login"
-        app:layout_constraintTop_toBottomOf="@id/view_face_login" />
+        android:paddingBottom="@dimen/_20sdp"
+        tools:context=".ui.MainActivity">
 
-    <View
-        android:id="@+id/view_verticle_divider"
-        android:layout_width="@dimen/_1sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:background="@drawable/verticle_gradient_divider"
-        app:layout_constraintBottom_toBottomOf="@id/view_face_login"
-        app:layout_constraintEnd_toStartOf="@id/view_finger_login"
-        app:layout_constraintStart_toEndOf="@id/view_face_login"
-        app:layout_constraintTop_toTopOf="@id/view_face_login" />
+        <ImageView
+            android:id="@+id/img_faces"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_272sdp"
+            android:layout_marginTop="@dimen/_minus60sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_person_img"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
 
-    <View
-        android:id="@+id/view_finger_login"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:background="@drawable/bg_blue_circle_gradient"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/view_verticle_divider"
-        app:layout_constraintTop_toBottomOf="@id/img_faces" />
-
-    <ImageView
-        android:layout_width="@dimen/_22sdp"
-        android:layout_height="@dimen/_22sdp"
-        android:src="@drawable/ic_finger_print_login"
-        app:layout_constraintBottom_toBottomOf="@id/view_finger_login"
-        app:layout_constraintEnd_toEndOf="@id/view_finger_login"
-        app:layout_constraintStart_toStartOf="@id/view_finger_login"
-        app:layout_constraintTop_toTopOf="@id/view_finger_login" />
-
-    <TextView
-        android:id="@+id/tv_finger_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_12sdp"
-        android:fontFamily="@font/josefinsanssemibold"
-        android:text="@string/fingerprint_login"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_11sdp"
-        app:layout_constraintEnd_toEndOf="@id/view_finger_login"
-        app:layout_constraintStart_toStartOf="@id/view_finger_login"
-        app:layout_constraintTop_toBottomOf="@id/view_finger_login" />
-
-    <View
-        android:id="@+id/view_divider_first"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_1sdp"
-        android:layout_marginTop="@dimen/_23sdp"
-        android:background="@drawable/horizontal_gradient_divider"
-        app:layout_constraintEnd_toEndOf="@id/view_finger_login"
-        app:layout_constraintStart_toStartOf="@id/view_face_login"
-        app:layout_constraintTop_toBottomOf="@id/tv_face_login" />
-
-    <ImageView
-        android:id="@+id/iv_create"
-        android:layout_width="@dimen/_16sdp"
-        android:layout_height="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_21sdp"
-        android:src="@drawable/ic_create_icon"
-        app:layout_constraintEnd_toStartOf="@id/tv_create_acc"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_divider_first" />
-
-    <TextView
-        android:id="@+id/tv_create_acc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:fontFamily="@font/josefinsanssemibold"
-        android:text="@string/create_your_twyn"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_14ssp"
-        app:layout_constraintBottom_toBottomOf="@id/iv_create"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toEndOf="@id/iv_create"
-        app:layout_constraintTop_toTopOf="@id/iv_create" />
-
-    <View
-        android:id="@+id/view_divider_second"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_1sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:background="@drawable/horizontal_gradient_divider"
-        app:layout_constraintEnd_toEndOf="@id/tv_create_acc"
-        app:layout_constraintStart_toStartOf="@id/iv_create"
-        app:layout_constraintTop_toBottomOf="@id/tv_create_acc" />
-
-    <ImageView
-        android:id="@+id/iv_recover"
-        android:layout_width="@dimen/_16sdp"
-        android:layout_height="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:src="@drawable/ic_recover"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="@id/iv_create"
-        app:layout_constraintTop_toBottomOf="@id/view_divider_second" />
-
-    <TextView
-        android:id="@+id/tv_recover_acc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/josefinsanssemibold"
-        android:text="@string/recover_your_twyn"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_14ssp"
-        app:layout_constraintBottom_toBottomOf="@id/iv_recover"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="@id/tv_create_acc"
-        app:layout_constraintTop_toTopOf="@id/iv_recover" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_face_img_overlay"
+            app:layout_constraintBottom_toBottomOf="@id/img_faces" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_screen_bg_overlay" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:src="@drawable/logo_white"
+            android:layout_marginTop="@dimen/_minus20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_face_login"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bg_blue_circle_gradient"
+            app:layout_constraintEnd_toStartOf="@id/view_verticle_divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_faces" />
+
+        <ImageView
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/ic_face_login"
+            app:layout_constraintBottom_toBottomOf="@id/view_face_login"
+            app:layout_constraintEnd_toEndOf="@id/view_face_login"
+            app:layout_constraintStart_toStartOf="@id/view_face_login"
+            app:layout_constraintTop_toTopOf="@id/view_face_login" />
+
+        <TextView
+            android:id="@+id/tv_face_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/josefinsanssemibold"
+            android:text="@string/face_login"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@id/view_face_login"
+            app:layout_constraintStart_toStartOf="@id/view_face_login"
+            app:layout_constraintTop_toBottomOf="@id/view_face_login" />
+
+        <View
+            android:id="@+id/view_verticle_divider"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/verticle_gradient_divider"
+            app:layout_constraintBottom_toBottomOf="@id/view_face_login"
+            app:layout_constraintEnd_toStartOf="@id/view_finger_login"
+            app:layout_constraintStart_toEndOf="@id/view_face_login"
+            app:layout_constraintTop_toTopOf="@id/view_face_login" />
+
+        <View
+            android:id="@+id/view_finger_login"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/bg_blue_circle_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_verticle_divider"
+            app:layout_constraintTop_toBottomOf="@id/img_faces" />
+
+        <ImageView
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/ic_finger_print_login"
+            app:layout_constraintBottom_toBottomOf="@id/view_finger_login"
+            app:layout_constraintEnd_toEndOf="@id/view_finger_login"
+            app:layout_constraintStart_toStartOf="@id/view_finger_login"
+            app:layout_constraintTop_toTopOf="@id/view_finger_login" />
+
+        <TextView
+            android:id="@+id/tv_finger_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/josefinsanssemibold"
+            android:text="@string/fingerprint_login"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@id/view_finger_login"
+            app:layout_constraintStart_toStartOf="@id/view_finger_login"
+            app:layout_constraintTop_toBottomOf="@id/view_finger_login" />
+
+        <View
+            android:id="@+id/view_divider_first"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_23sdp"
+            android:background="@drawable/horizontal_gradient_divider"
+            app:layout_constraintEnd_toEndOf="@id/view_finger_login"
+            app:layout_constraintStart_toStartOf="@id/view_face_login"
+            app:layout_constraintTop_toBottomOf="@id/tv_face_login" />
+
+        <ImageView
+            android:id="@+id/iv_create"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_21sdp"
+            android:src="@drawable/ic_create_icon"
+            app:layout_constraintEnd_toStartOf="@id/tv_create_acc"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_divider_first" />
+
+        <TextView
+            android:id="@+id/tv_create_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/josefinsanssemibold"
+            android:text="@string/create_your_twyn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/iv_create"
+            app:layout_constraintTop_toTopOf="@id/iv_create" />
+
+        <View
+            android:id="@+id/view_divider_second"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/horizontal_gradient_divider"
+            app:layout_constraintEnd_toEndOf="@id/tv_create_acc"
+            app:layout_constraintStart_toStartOf="@id/iv_create"
+            app:layout_constraintTop_toBottomOf="@id/tv_create_acc" />
+
+        <ImageView
+            android:id="@+id/iv_recover"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/ic_recover"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/iv_create"
+            app:layout_constraintTop_toBottomOf="@id/view_divider_second" />
+
+        <TextView
+            android:id="@+id/tv_recover_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/josefinsanssemibold"
+            android:text="@string/recover_your_twyn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_recover"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/tv_create_acc"
+            app:layout_constraintTop_toTopOf="@id/iv_recover" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

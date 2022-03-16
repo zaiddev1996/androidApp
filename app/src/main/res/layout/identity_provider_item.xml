@@ -49,6 +49,7 @@
         android:layout_marginTop="@dimen/_5sdp"
         android:fontFamily="@font/josefinsanssemibold"
         android:text="Option 1"
+        android:visibility="gone"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="@dimen/_12ssp"

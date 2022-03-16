@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.fourio.twynapp.R
 import com.fourio.twynapp.adapters.IdentityProvidersAdapter
 import com.fourio.twynapp.databinding.FragmentAddIdentitySelectionBinding
-import com.fourio.twynapp.model.IdentityFeed
-import com.fourio.twynapp.model.IdentityHistory
 import com.fourio.twynapp.model.IdentityProviders
 import com.google.gson.Gson
 import java.io.*

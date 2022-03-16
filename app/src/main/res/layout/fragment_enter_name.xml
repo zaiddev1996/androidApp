@@ -7,7 +7,7 @@
     android:background="@drawable/light_frag_bg"
     tools:context=".ui.onBoardingProcess.enterNameFragment.EnterNameFragment">
 
-     <View
+    <View
         android:id="@+id/view_header"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_65sdp"
@@ -144,59 +144,59 @@
 
 
     <TextView
+        android:id="@+id/tv_heading_what_full_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_top_steps"
-        android:textColor="@color/white"
-        android:id="@+id/tv_heading_what_full_name"
-        android:text="@string/what_nick_name"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
         android:fontFamily="@font/josefinsanssemibold"
+        android:text="@string/what_nick_name"
+        android:textColor="@color/white"
         android:textSize="@dimen/_20ssp"
-       android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_steps" />
 
     <TextView
+        android:id="@+id/tv_heading_nick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/tv_heading_what_full_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_heading_what_full_name"
         android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:fontFamily="@font/josefinsanssemibold"
         android:text="@string/nick_name"
         android:textAllCaps="true"
         android:textColor="@color/white"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:fontFamily="@font/josefinsanssemibold"
-        android:id="@+id/tv_heading_nick"
-        android:textSize="@dimen/_11ssp"/>
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintStart_toStartOf="@id/tv_heading_what_full_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_what_full_name" />
 
     <EditText
+        android:id="@+id/et_nick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_heading_nick"
         android:layout_marginStart="@dimen/_20sdp"
-        android:paddingStart="@dimen/_10sdp"
-        android:paddingEnd="@dimen/_10sdp"
-        android:inputType="textCapWords"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:backgroundTint="#80FFFFFF"
-        android:hint="The Johndoe"
-        android:textColorHint="#80FFFFFF"
-        android:paddingBottom="@dimen/_13sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:textColor="#80FFFFFF"
-        android:id="@+id/et_nick"
         android:fontFamily="@font/josefinsanssemibold"
+        android:hint="The Johndoe"
+        android:inputType="textPersonName"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_13sdp"
+        android:textColor="#80FFFFFF"
+        android:textColorHint="#80FFFFFF"
         android:textSize="@dimen/_20ssp"
-        android:layout_marginEnd="@dimen/_20sdp"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_heading_nick" />
 
     <include
-        layout="@layout/yellow_continue_btn"
         android:id="@+id/btn_next"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_nick"
+        layout="@layout/yellow_continue_btn"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_80sdp"
-        android:layout_width="match_parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_nick" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

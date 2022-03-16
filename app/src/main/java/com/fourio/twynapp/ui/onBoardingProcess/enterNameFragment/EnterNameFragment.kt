@@ -5,12 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import com.fourio.twynapp.R
-import com.fourio.twynapp.adapters.IdentityProvidersAdapter
-import com.fourio.twynapp.databinding.FragmentAddIdentitySelectionBinding
 import com.fourio.twynapp.databinding.FragmentEnterNameBinding
+import com.fourio.twynapp.utils.SharedPref
 
 
 class EnterNameFragment : Fragment() {
@@ -37,7 +36,16 @@ class EnterNameFragment : Fragment() {
 
 
         binding.btnNext.cvYellow.setOnClickListener {
-            findNavController().navigate(R.id.enterIdFragment)
+            if (binding.etNick.text.isNotEmpty()) {
+                SharedPref(requireActivity()).setValue(
+                    requireActivity().getString(R.string.pref_key_nick),
+                    binding.etNick.text.toString()
+                )
+                findNavController().navigate(R.id.enterIdFragment)
+            } else {
+                Toast.makeText(requireContext(), "Please enter name first.", Toast.LENGTH_SHORT)
+                    .show()
+            }
         }
         binding.tvBack.setOnClickListener {
             findNavController().popBackStack()

@@ -13,8 +13,8 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:clickable="true"
         android:backgroundTint="@android:color/transparent"
+        android:clickable="true"
         android:elevation="@dimen/_13sdp"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
@@ -27,12 +27,12 @@
     <View
         android:layout_width="0dp"
         android:layout_height="@dimen/_40sdp"
-        app:layout_constraintStart_toStartOf="@id/cv_yellow"
-        app:layout_constraintEnd_toEndOf="@id/cv_yellow"
-        android:elevation="@dimen/_10sdp"
         android:background="@drawable/blue_btn_bg_gradient"
-        app:layout_constraintTop_toTopOf="@id/cv_yellow"
-        app:layout_constraintBottom_toBottomOf="@id/cv_yellow"/>
+        android:elevation="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/cv_yellow"
+        app:layout_constraintEnd_toEndOf="@id/cv_yellow"
+        app:layout_constraintStart_toStartOf="@id/cv_yellow"
+        app:layout_constraintTop_toTopOf="@id/cv_yellow" />
 
     <TextView
         android:id="@+id/tv_btn"
@@ -46,7 +46,6 @@
         app:layout_constraintBottom_toBottomOf="@id/cv_yellow"
         app:layout_constraintEnd_toStartOf="@id/iv_arrow_right"
         app:layout_constraintHorizontal_chainStyle="packed"
-
         app:layout_constraintStart_toStartOf="@id/cv_yellow"
         app:layout_constraintTop_toTopOf="@id/cv_yellow" />
 
@@ -57,11 +56,24 @@
         android:layout_marginStart="@dimen/_5sdp"
         android:elevation="@dimen/_12sdp"
         android:src="@drawable/ic_arrow_right"
-        app:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/tv_btn"
         app:layout_constraintEnd_toEndOf="@id/cv_yellow"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/tv_btn"
-        app:layout_constraintTop_toTopOf="@id/tv_btn" />
+        app:layout_constraintTop_toTopOf="@id/tv_btn"
+        app:tint="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/progress_btn"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:elevation="@dimen/_12sdp"
+        android:indeterminateTint="#94FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/cv_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cv_yellow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

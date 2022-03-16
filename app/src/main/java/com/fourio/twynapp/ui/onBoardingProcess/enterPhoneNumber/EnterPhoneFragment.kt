@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.fourio.twynapp.R
 import com.fourio.twynapp.adapters.SpinnerAdapter
 import com.fourio.twynapp.databinding.FragmentEnterPhoneBinding
+import com.fourio.twynapp.utils.SharedPref
 
 class EnterPhoneFragment : Fragment() {
     private var _binding: FragmentEnterPhoneBinding? = null
@@ -43,20 +44,18 @@ class EnterPhoneFragment : Fragment() {
         val customDropDownAdapter = SpinnerAdapter(requireContext(), modelList)
         binding.phoneSpinner.adapter = customDropDownAdapter
 
-//        ArrayAdapter.createFromResource(
-//            requireContext(),
-//            R.array.planets_array,
-//            R.layout.phone_spinner_item
-//        ).also { adapter ->
-//            // Specify the layout to use when the list of choices appears
-//            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//            // Apply the adapter to the spinner
-//            binding.phoneSpinner.adapter = adapter
-//        }
-
-
         binding.btnNext.cvYellow.setOnClickListener {
-            findNavController().navigate(R.id.otpFragment)
+            if (binding.etPhone.text.isNotEmpty()) {
+                SharedPref(requireActivity()).setValue(
+                    requireActivity().getString(R.string.pref_key_phone),
+                    "${modelList[binding.phoneSpinner.selectedItemPosition]}${binding.etPhone.text}"
+                )
+                findNavController().navigate(R.id.otpFragment)
+            } else {
+                Toast.makeText(requireContext(), "Please enter phone first.", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
         }
         binding.tvBack.setOnClickListener {
             findNavController().popBackStack()

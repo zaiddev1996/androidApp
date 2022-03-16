@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_badges"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_beginner_badge"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:elevation="@dimen/_2sdp"
+        android:src="@drawable/ic_badge"
+        app:layout_constraintStart_toStartOf="@id/cv_badges"
+        app:layout_constraintTop_toTopOf="@id/cv_badges" />
+
+
+    <ImageView
+        android:id="@+id/iv_achieved_badge"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:elevation="@dimen/_2sdp"
+        android:src="@drawable/achievers_badge"
+        app:layout_constraintEnd_toEndOf="@id/cv_badges"
+        app:layout_constraintTop_toTopOf="@id/cv_badges" />
+
+    <ImageView
+        android:id="@+id/iv_superface_badge"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:elevation="@dimen/_2sdp"
+        android:src="@drawable/superface_badge"
+        app:layout_constraintStart_toStartOf="@id/cv_badges"
+        app:layout_constraintTop_toBottomOf="@id/iv_beginner_badge" />
+
+
+    <ImageView
+        android:id="@+id/iv_super_fingers_badge"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:elevation="@dimen/_2sdp"
+        android:src="@drawable/superfingers_badge"
+        app:layout_constraintEnd_toEndOf="@id/cv_badges"
+        app:layout_constraintTop_toBottomOf="@id/iv_achieved_badge" />
+
+    <ImageView
+        android:id="@+id/iv_excellent_badge"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:elevation="@dimen/_2sdp"
+        android:src="@drawable/excellent_badge"
+        app:layout_constraintStart_toStartOf="@id/cv_badges"
+        app:layout_constraintTop_toBottomOf="@id/iv_superface_badge" />
+
+
+    <ImageView
+        android:id="@+id/iv_superstart_badge"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:elevation="@dimen/_2sdp"
+        android:src="@drawable/superstar_badge"
+        app:layout_constraintEnd_toEndOf="@id/cv_badges"
+        app:layout_constraintTop_toBottomOf="@id/iv_super_fingers_badge" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

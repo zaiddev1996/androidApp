@@ -1,4 +1,4 @@
-package com.fourio.twynapp
+package br.fourio.twynapp
 
 import org.junit.Test
 

@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.fourio.twynapp.R
 import com.fourio.twynapp.databinding.FragmentEnterIdNumberBinding
+import com.fourio.twynapp.utils.SharedPref
 
 
 class EnterIdNumberFragment : Fragment() {
@@ -32,7 +34,17 @@ class EnterIdNumberFragment : Fragment() {
 
 
         binding.btnNext.cvYellow.setOnClickListener {
-            findNavController().navigate(R.id.enterPhoneFragment)
+            if (binding.etId.text.isNotEmpty()) {
+                SharedPref(requireActivity()).setValue(
+                    requireActivity().getString(R.string.pref_key_id),
+                    binding.etId.text.toString()
+                )
+                findNavController().navigate(R.id.enterPhoneFragment)
+            } else {
+                Toast.makeText(requireContext(), "Please enter id first.", Toast.LENGTH_SHORT)
+                    .show()
+            }
+
         }
         binding.tvBack.setOnClickListener {
             findNavController().popBackStack()

@@ -7,12 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.fourio.twynapp.R
-import com.fourio.twynapp.adapters.FeedAdapter
 import com.fourio.twynapp.adapters.HistoryAdapter
-import com.fourio.twynapp.databinding.FragmentHistoryBinding
-import com.fourio.twynapp.databinding.FragmentHomeBinding
 import com.fourio.twynapp.model.IdentityFeed
+import com.fourio.twynapp.databinding.FragmentHistoryBinding
 import com.fourio.twynapp.model.IdentityHistory
 import com.google.gson.Gson
 import java.io.*
@@ -78,7 +75,7 @@ class historyFragment : Fragment() {
         val jsonString: String = writer.toString()
         val gson = Gson()
         val identityFeed: IdentityHistory = gson.fromJson(jsonString, IdentityHistory::class.java)
-        Log.e("JSON_FILE", jsonString)
+//        Log.e("JSON_FILE", jsonString)
         return identityFeed.identity_history
     }
 }

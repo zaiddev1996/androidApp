@@ -7,11 +7,7 @@
     <string name="create_your_twyn">Create Your Twyn</string>
     <string name="recover_your_twyn">Recover Your Twyn</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
-    <string name="terms_and_conditions_text">Suspendisse ac quam in lacus volutpat mollis. Sed varius venenatis erat, et eleifend ante convallis quis. Integer non sapien non velit accumsan tincidunt sed vel elit. Donec lorem libero, luctus in venenatis nec, finibus ut sem. Vivamus condimentum cursus sagittis. In tempus est urna, feugiat feugiat erat sagittis sit amet. Morbi velit ex, aliquet ut consequat vitae, egestas vitae orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean tincidunt sodales libero, quis eleifend erat gravida eget. Curabitur egestas non nisi vel eleifend. Aenean eget justo sapien. Donec tortor enim, fermentum eu sagittis ut, imperdiet ut augue. In efficitur ultricies justo nec imperdiet.
-
-Duis vel commodo dolor. Integer fringilla orci vitae odio pharetra imperdiet. Vivamus fringilla aliquam dignissim. Etiam nisi magna, gravida a elit non, finibus bibendum ante. Quisque quis nisi non quam tempor iaculis. Pellentesque quis ex sed odio laoreet gravida a ut purus. Morbi aliquam nunc eget mauris imperdiet, et molestie mauris congue. Maecenas ut justo nibh. Morbi sit amet risus tellus. Proin laoreet nec velit vitae egestas. Nam imperdiet ac augue gravida porttitor.
-
-Nunc ultricies posuere nisl quis faucibus. Sed vitae eleifend est. Phasellus eu enim lobortis nulla dapibus varius. Donec sit amet turpis pharetra, aliquam ex et, finibus ligula. Integer id sem vel nibh feugiat imperdiet. Ut nunc nunc, mattis in imperdiet sed, cursus ut ante. Quisque eleifend sed libero eu pharetra. Pellentesque bibendum nunc et egestas aliquam. Nunc pharetra arcu quis malesuada mattis. Morbi ut placerat dolor, a semper nibh. Etiam condimentum massa et mattis pellentesque. Maecenas pellentesque ornare arcu nec semper. Nulla facilisis rhoncus purus sed sodales.</string>
+    <string name="terms_and_conditions_text">Suspendisse ac quam in lacus volutpat mollis. Sed varius venenatis erat, et eleifend ante convallis quis. Integer non sapien non velit accumsan tincidunt sed vel elit. Donec lorem libero, luctus in venenatis nec, finibus ut sem. Vivamus condimentum cursus sagittis. In tempus est urna, feugiat feugiat erat sagittis sit amet. Morbi velit ex, aliquet ut consequat vitae, egestas vitae orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean tincidunt sodales libero, quis eleifend erat gravida eget. Curabitur egestas non nisi vel eleifend. Aenean eget justo sapien. Donec tortor enim, fermentum eu sagittis ut, imperdiet ut augue. In efficitur ultricies justo nec imperdiet.</string>
     <string name="i_agree_to_terms">I agree to all terms</string>
     <string name="back">Back</string>
     <string name="create_an_acc">Create an account</string>
@@ -72,6 +68,18 @@ Nunc ultricies posuere nisl quis faucibus. Sed vitae eleifend est. Phasellus eu 
     <string name="help_and_support">Help and Support</string>
     <string name="about">About</string>
     <string name="faq">Faq</string>
+
+    <string name="pref_key_nick">nick</string>
+    <string name="pref_key_id">id</string>
+    <string name="pref_key_phone">phone</string>
+    <string name="pref_key_face_score">face_score</string>
+    <string name="pref_key_left_hand_score">left_hand_score</string>
+    <string name="pref_key_right_hand_score">right_hand_score</string>
+    <string name="pref_key_base64_face">base64_face</string>
+    <string name="pref_key_data_to_upload">data_to_upload</string>
+    <string name="pref_key_face_enrolled">face_enrolled</string>
+    <string name="pref_key_finger_enrolled">finger_enrolled</string>
+
 
     <string-array name="planets_array">
         <item>+212</item>

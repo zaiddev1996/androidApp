@@ -1,7 +1,6 @@
 package com.fourio.twynapp.ui
 
 import android.content.Intent
-import android.content.res.Resources
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +10,15 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.WindowCompat
 import com.fourio.twynapp.R
 import com.fourio.twynapp.databinding.ActivityMainBinding
+import com.fourio.twynapp.model.FaceScanInfo
+import com.fourio.twynapp.model.FingerScanInfo
+import com.fourio.twynapp.repo.repository.Repo
 import com.fourio.twynapp.ui.termsAndConditions.TermsAndConditions
+import com.fourio.twynapp.utils.SharedPref
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -27,7 +34,62 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, TermsAndConditions::class.java))
         }
 
+        uploadDataIfHave()
+    }
 
+    private fun uploadDataIfHave() {
+        if (SharedPref(this).getBooleanValue(getString(R.string.pref_key_data_to_upload))) {
+            val sharedPref = SharedPref(this)
+            val fingerArray = ArrayList<FingerScanInfo>()
+            val fingerScanInfo = FingerScanInfo()
+            fingerScanInfo.height = 10
+            fingerScanInfo.isoquality = 10
+            fingerScanInfo.position = 1
+            fingerScanInfo.width = 10
+            fingerScanInfo.imageData = "Base64"
+            fingerScanInfo.internalQuality = 10
+            fingerArray.add(fingerScanInfo)
+            val faceScanInfo = FaceScanInfo()
+            faceScanInfo.faceId = "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+            faceScanInfo.height = 10
+            faceScanInfo.width = 10
+            faceScanInfo.imageData = sharedPref.getValue(getString(R.string.pref_key_base64_face))
+            faceScanInfo.internalQuality = 10
+            faceScanInfo.isoquality = 10
+            faceScanInfo.position = "Frontal"
+            val faceArray = ArrayList<FaceScanInfo>()
+            faceArray.add(
+                faceScanInfo
+            )
+            GlobalScope.launch {
+                withContext(Dispatchers.IO)
+                {
+
+                    when (val response = Repo().enrollPerson(
+                        sharedPref.getValue(getString(R.string.pref_key_nick)),
+                        sharedPref.getValue(getString(R.string.pref_key_phone)),
+                        fingerArray,
+                        faceArray
+                    )) {
+                        is Repo.Result.Success -> {
+                            withContext(Dispatchers.Main) {
+                                sharedPref.setBooleanValue(
+                                    getString(R.string.pref_key_data_to_upload),
+                                    false
+                                )
+                            }
+                        }
+                        is Repo.Result.Failure -> {
+
+                        }
+                        is Repo.Result.NetworkError -> {
+
+                        }
+                    }
+                }
+
+            }
+        }
     }
 
     private fun setFullscreen() {

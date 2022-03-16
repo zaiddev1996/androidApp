@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">https://192.81.212.133:30010/api/nisttransactions</domain>
+        <trust-anchors>
+            <certificates src="@raw/twyn_api"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
