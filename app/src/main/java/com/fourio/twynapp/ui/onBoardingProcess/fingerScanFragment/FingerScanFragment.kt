@@ -2,6 +2,7 @@ package com.fourio.twynapp.ui.onBoardingProcess.fingerScanFragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,7 @@ import br.com.twyn.sdk.ui.helpers.EnrollFingersResult
 import com.fourio.twynapp.R
 import com.fourio.twynapp.databinding.FragmentFingerScanBinding
 import com.fourio.twynapp.utils.SharedPref
+import com.fourio.twynapp.utils.extensions.preference
 
 
 class FingerScanFragment : Fragment(), EnrollFingerListener {
@@ -88,7 +90,7 @@ class FingerScanFragment : Fragment(), EnrollFingerListener {
                 (getString(R.string.pref_key_finger_enrolled)),
                 true
             )
-            findNavController().navigate(R.id.scanFingerStartFragment)
+            findNavController().navigate(R.id.accountSuccessFragment)
         }
     }
 
@@ -110,5 +112,7 @@ class FingerScanFragment : Fragment(), EnrollFingerListener {
         leftHandScore = enrollFingersResult.leftHandScore.toString()
         rightHandScore = enrollFingersResult.rightHandScore.toString()
         returnedResultsGood = true
+        Log.e("Finger Enrolled", enrollFingersResult.leftHandScore.toString())
+
     }
 }

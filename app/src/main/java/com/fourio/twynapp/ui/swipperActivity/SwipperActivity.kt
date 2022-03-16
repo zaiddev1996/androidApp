@@ -11,15 +11,15 @@ import androidx.core.view.WindowCompat
 import com.fourio.twynapp.adapters.SwipeCardAdapter
 import com.fourio.twynapp.databinding.ActivitySwipperBinding
 import com.fourio.twynapp.ui.dashboard.DashboardActivity
-import com.yuyakaido.android.cardstackview.CardStackLayoutManager
-import com.yuyakaido.android.cardstackview.CardStackListener
-import com.yuyakaido.android.cardstackview.Direction
 import android.view.animation.AlphaAnimation
 
 import android.R
+import android.view.animation.AccelerateInterpolator
 import android.view.animation.Animation
 
 import android.widget.TextView
+import com.yuyakaido.android.cardstackview.*
+import kotlin.math.log
 
 
 class SwipperActivity : AppCompatActivity(), CardStackListener {
@@ -57,11 +57,33 @@ class SwipperActivity : AppCompatActivity(), CardStackListener {
         cardStackLayoutManager.setSwipeThreshold(0.1f)
         binding.cvBankDetails.layoutManager = cardStackLayoutManager
 
+
+
         val feedAdapter = SwipeCardAdapter() {
 
         }
         binding.cvBankDetails.adapter = feedAdapter
         feedAdapter.submitList(arrayList)
+
+        binding.cvAccept.setOnClickListener {
+            val setting = SwipeAnimationSetting.Builder()
+                .setDirection(Direction.Right)
+                .setDuration(Duration.Normal.duration)
+                .setInterpolator(AccelerateInterpolator())
+                .build()
+            cardStackLayoutManager.setSwipeAnimationSetting(setting)
+            binding.cvBankDetails.swipe()
+        }
+
+        binding.cvReject.setOnClickListener {
+            val setting = SwipeAnimationSetting.Builder()
+                .setDirection(Direction.Left)
+                .setDuration(Duration.Normal.duration)
+                .setInterpolator(AccelerateInterpolator())
+                .build()
+            cardStackLayoutManager.setSwipeAnimationSetting(setting)
+            binding.cvBankDetails.swipe()
+        }
 
     }
 

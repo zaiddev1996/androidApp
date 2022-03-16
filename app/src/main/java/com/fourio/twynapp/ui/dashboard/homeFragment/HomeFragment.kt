@@ -14,6 +14,8 @@ import com.fourio.twynapp.R
 import com.fourio.twynapp.databinding.FragmentHomeBinding
 import com.fourio.twynapp.model.IdentityFeed
 import com.fourio.twynapp.utils.SharedPref
+import com.fourio.twynapp.utils.extensions.preference
+import com.fourio.twynapp.utils.extensions.putAny
 import com.google.gson.Gson
 import java.io.*
 
@@ -58,16 +60,16 @@ class HomeFragment : Fragment() {
                 getString(
                     R.string.pref_key_left_hand_score
                 )
-            ).toFloat()
+            ).toFloat() * 0.01f
             animateGuage(
                 binding.guageViewDoc.guageView,
                 binding.guageViewDoc.viewNeedle,
                 leftHandScore * 180
             )
-            if (leftHandScore >= 0.9) {
+            if (leftHandScore >= 90) {
                 binding.guageViewDoc.rbGraphScore.rating = 5f
             } else {
-                binding.guageViewDoc.rbGraphScore.rating = leftHandScore / 2
+                binding.guageViewDoc.rbGraphScore.rating = leftHandScore * 5f
             }
         }
     }
@@ -86,7 +88,7 @@ class HomeFragment : Fragment() {
                 getString(
                     R.string.pref_key_left_hand_score
                 )
-            ).toFloat()
+            ).toFloat() * 0.01f
             animateGuage(
                 binding.guageViewFinger.guageView,
                 binding.guageViewFinger.viewNeedle,
@@ -95,7 +97,7 @@ class HomeFragment : Fragment() {
             if (leftHandScore >= 0.9) {
                 binding.guageViewFinger.rbGraphScore.rating = 5f
             } else {
-                binding.guageViewFinger.rbGraphScore.rating = leftHandScore / 2
+                binding.guageViewFinger.rbGraphScore.rating = leftHandScore * 5
             }
         }
     }
@@ -115,7 +117,7 @@ class HomeFragment : Fragment() {
             if (faceScore >= 0.9) {
                 binding.guageViewFace.rbGraphScore.rating = 5f
             } else {
-                binding.guageViewFace.rbGraphScore.rating = faceScore / 2
+                binding.guageViewFace.rbGraphScore.rating = faceScore * 5
             }
         }
     }

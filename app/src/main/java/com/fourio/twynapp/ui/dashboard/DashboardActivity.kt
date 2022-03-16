@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.fourio.twynapp.R
 import com.fourio.twynapp.databinding.ActivityDashboardBinding
+import com.fourio.twynapp.utils.extensions.preference
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class DashboardActivity : AppCompatActivity() {
@@ -19,7 +20,6 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         setFullscreen()
         setListeners()
