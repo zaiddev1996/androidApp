@@ -30,4 +30,4 @@ fun SharedPreferences.putAny(
     }
 }
 
-//fun C
+//fun Class.log(){}
