@@ -2,6 +2,8 @@ package com.fourio.twynapp.utils.extensions
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences
+import android.util.Log
+import com.fourio.twynapp.BuildConfig
 import com.google.gson.Gson
 
 @SuppressLint("ApplySharedPref")
@@ -30,4 +32,6 @@ fun SharedPreferences.putAny(
     }
 }
 
-//fun Class.log(){}
+fun Any.logD(message: String){
+    if (BuildConfig.DEBUG) Log.d(this::class.java.simpleName, message)
+}

@@ -15,6 +15,7 @@ import com.fourio.twynapp.model.FingerScanInfo
 import com.fourio.twynapp.repo.repository.Repo
 import com.fourio.twynapp.ui.termsAndConditions.TermsAndConditions
 import com.fourio.twynapp.utils.SharedPref
+import com.fourio.twynapp.utils.extensions.logD
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
